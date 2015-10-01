@@ -10,7 +10,7 @@ enemies_controller.image = love.graphics.newImage("enemy.png")
 enemies_controller.image:setFilter("nearest","nearest")
 
 function love.load()
-	Grid:init(50, 200, 50, 200, 10)
+	Grid:init(0, 200, 0, 200, 20)
 
 	player = {}
 	player.x = 0
@@ -101,7 +101,7 @@ function love.update(dt)
 end
 
 function love.draw()
-	Grid:draw()
+	Grid:drawGridLines()
 	-- love.graphics.scale(0.5)
 	love.graphics.setColor(255, 255, 255)
 	-- love.graphics.rectangle("fill", player.x, player.y, player.w, player.h)

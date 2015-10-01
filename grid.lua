@@ -18,15 +18,15 @@ function Grid:drawGridLines()
 	horizStart = self:toScreenCoordinates(self.minX, 0)
 	horizEnd = self:toScreenCoordinates(self.maxX, 0)
 	love.graphics.line(horizStart[1], horizStart[2], horizEnd[1], horizEnd[2])
-	love.graphics.print(self.minX, horizStart[1], horizStart[2])
-	love.graphics.print(self.maxX, horizEnd[1] - love.graphics.getFont():getWidth(self.maxX), horizStart[2])
+	-- love.graphics.print(self.minX, horizStart[1], horizStart[2])
+	-- love.graphics.print(self.maxX, horizEnd[1] - love.graphics.getFont():getWidth(self.maxX), horizStart[2])
 
 	--Y axis
 	vertStart = self:toScreenCoordinates(0, self.minY)
 	vertEnd = self:toScreenCoordinates(0, self.maxY)
 	love.graphics.line(vertStart[1], vertStart[2], vertEnd[1], vertEnd[2])
-	love.graphics.print(self.maxY, vertStart[1] + 1, vertStart[2])
-	love.graphics.print(self.minY, vertEnd[1] + 1, vertEnd[2] - love.graphics.getFont():getHeight())
+	-- love.graphics.print(self.maxY, vertStart[1] + 1, vertStart[2])
+	-- love.graphics.print(self.minY, vertEnd[1] + 1, vertEnd[2] - love.graphics.getFont():getHeight())
 	
 	--Major gridlines from 0 to maxX
 	for i = 0, self.maxX, self.lineInterval do
